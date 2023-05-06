@@ -1,0 +1,9 @@
+# This file tells https://pre-commit.com/
+# which hooks are provided by this repo
+# for use by other git repos.
+
+- id: make-test
+  name: Run quick unit tests with 'make test' before commit
+  description: Run quick unit tests with 'make test' before commit
+  entry: pre_commit_hooks/make_test
+  language: script
