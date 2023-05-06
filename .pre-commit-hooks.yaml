@@ -7,3 +7,9 @@
   description: Run quick unit tests with 'make test' before commit
   entry: pre_commit_hooks/make_test
   language: script
+
+- id: make
+  name: Run 'make ${target}' before commit
+  description: Run 'make ${target}' before commit
+  entry: make
+  language: system
