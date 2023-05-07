@@ -13,3 +13,19 @@
   description: Run 'make ${target}' before commit
   entry: make
   language: system
+  always_run: true
+  pass_filenames: false
+
+- id: identity
+  name: Echo back all arguments.
+  description: Echo back all arguments. Useful for debugging.
+  entry: pre_commit_hooks/identity
+  language: script
+  always_run: true
+
+- id: echo
+  name: Echo back all arguments.
+  description: Echo back all arguments. Useful for debugging.
+  entry: echo
+  language: system
+  always_run: true

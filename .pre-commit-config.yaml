@@ -1,0 +1,29 @@
+repos:
+- repo: https://github.com/gforien/pre-commit-hooks
+  rev: v0.3.0
+  hooks:
+    - id: echo
+      args: [key]
+      pass_filenames: false
+    - id: identity
+      args: [target]
+
+- repo: meta
+  hooks:
+    - id: identity
+      args: [test, coucou]
+      always_run: true
+
+- repo: local
+  hooks:
+    - id: local-identity
+      name: local-identity
+      entry: identity
+      args: [test]
+      language: script
+
+    - id: local-echo
+      name: local-echo
+      entry: echo
+      args: [test]
+      language: system
